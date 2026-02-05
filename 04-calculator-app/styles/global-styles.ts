@@ -51,7 +51,8 @@ export const globalStyles = StyleSheet.create({
         padding: 10,
         fontSize: 30,
         color: Colors.textPrimary,
-        fontWeight: '300'
+        fontWeight: '300',
+
     }
 
 })
