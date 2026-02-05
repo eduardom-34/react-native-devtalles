@@ -22,6 +22,11 @@ export default function App() {
       <FAB label='+1'
       onPress={ () => setCount( count + 1)}
       onLongPress={() => setCount(0)}
+      position="right"
+      />
+
+      <FAB label='Reset'
+      onPress={ () => setCount( 0 )}
       position="left"
       />
 
