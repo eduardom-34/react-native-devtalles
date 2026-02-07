@@ -24,7 +24,39 @@ export const useCalculator = () => {
 
 
   const buildNumber = (numberString: string) => {
-    console.log({ numberString });
+
+    // Verificar si ya existe un punto decimal
+    if (number.includes('.') && numberString === '.') return;
+
+    if (number.startsWith('0') || number.startsWith('-0')) {
+
+      if (numberString === '.') {
+        return setNumber(number + numberString)
+      }
+
+
+      // Evaluar si es otro cero y no hay punto
+      if (numberString === '0' && number.includes('.')) {
+        return setNumber(number + numberString)
+      }
+
+
+      // Evaluar si es diferrente de cero, no hay punto decimal y es el primer numero
+      if (numberString !== '0' && !number.includes('.')) {
+        return setNumber(numberString)
+      }
+
+
+      // Evitar el 0000000.000
+      if (numberString === '0' && !number.includes('.')) {
+        return;
+      }
+    };
+
+    setNumber(number + numberString);
+
+
+
   };
 
 
