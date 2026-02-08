@@ -12,6 +12,10 @@ const CalculatorApp = () => {
   const {
     formula,
     buildNumber,
+    clean,
+    toggleSign,
+    deleteLast,
+
   } = useCalculator()
 
   return (
@@ -31,19 +35,19 @@ const CalculatorApp = () => {
           label='C'
           blackText
           color={Colors.lightGray}
-          onPress={() => console.log("C")}
+          onPress={clean}
         />
         <CalculatorButton
           label='+/-'
           blackText
           color={Colors.lightGray}
-          onPress={() => console.log("+/-")}
+          onPress={toggleSign}
         />
         <CalculatorButton
           label='del'
           blackText
           color={Colors.lightGray}
-          onPress={() => console.log("del")}
+          onPress={deleteLast}
         />
         <CalculatorButton
           label='÷'
