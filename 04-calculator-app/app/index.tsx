@@ -20,6 +20,7 @@ const CalculatorApp = () => {
     multiplyOperation,
     subtractOperation,
     addOperation,
+    calculateResult,
 
   } = useCalculator()
 
@@ -124,7 +125,7 @@ const CalculatorApp = () => {
         <CalculatorButton
           label='='
           color={Colors.orange}
-          onPress={() => console.log("=")}
+          onPress={calculateResult}
         />
       </View>
 
