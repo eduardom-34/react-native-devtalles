@@ -1,14 +1,28 @@
-import { Link } from 'expo-router'
+import CustomButton from '@/components/shared/CustomButton'
+import { Link, router } from 'expo-router'
 import { View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import '../global.css'
 
-const HomaScreen = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <View className='px-10'>
+      <View className='px-10 mt-5'>
 
-        <Link className='mb-5' href='/products'>
+
+        <Link href="/products" asChild>
+          <CustomButton color="primary" onPress={() => router.push('/products')}
+          >Productos
+          </CustomButton>
+        </Link>
+
+        <CustomButton color="primary" onPress={() => router.push('/products')}
+        >Productos
+        </CustomButton>
+
+
+
+        {/* <Link className='mb-5' href='/products'>
           Productos{' '}
         </Link>
         <Link className='mb-5' href='/profile'>
@@ -16,7 +30,7 @@ const HomaScreen = () => {
         </Link>
         <Link className='mb-5' href='/settings'>
           Ajustes{' '}
-        </Link>
+        </Link> */}
 
 
       </View>
@@ -24,4 +38,4 @@ const HomaScreen = () => {
   )
 }
 
-export default HomaScreen
+export default HomeScreen
