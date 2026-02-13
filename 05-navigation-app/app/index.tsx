@@ -3,7 +3,7 @@ import './global.css'
 
 const App = () => {
 
-  return <Redirect href='/home' />
+  return <Redirect href='/(stack)/home' />
 
 
 
