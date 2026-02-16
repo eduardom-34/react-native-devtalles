@@ -5,13 +5,23 @@ import { Tabs } from 'expo-router'
 const TabsLayout = () => {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'green' }}>
+
+      <Tabs.Screen
+        name="(stack)"
+        options={{
+          title: 'Stack',
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="person-add-outline" color={color} />,
+        }}
+      />
+
       <Tabs.Screen
         name="home/index"
         options={{
-          title: 'Home',
+          title: 'home',
           tabBarIcon: ({ color }) => <Ionicons size={28} name="home-outline" color={color} />,
         }}
       />
+
       <Tabs.Screen
         name="favorites/index"
         options={{
@@ -19,6 +29,7 @@ const TabsLayout = () => {
           tabBarIcon: ({ color }) => <Ionicons size={28} name="star-outline" color={color} />,
         }}
       />
+
     </Tabs>
   )
 }
