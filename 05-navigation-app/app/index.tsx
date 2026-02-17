@@ -5,7 +5,7 @@ const App = () => {
 
   // return <Redirect href='/(stack)/home' />
   // return <Redirect href="/tabs" />
-  return <Redirect href='/tabs/drawer' />
+  return <Redirect href='/drawer' />
 
 
 
